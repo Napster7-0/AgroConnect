@@ -1,11 +1,26 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
-import { ChevronRight, Leaf, Map, MessageSquare, BarChart3, Users, Link2 } from "lucide-react"
-import Link from "next/link"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import {
+  ChevronRight,
+  Leaf,
+  Map,
+  MessageSquare,
+  BarChart3,
+  Users,
+  Link2,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,11 +33,16 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <Badge className="bg-green-600 hover:bg-green-700">Innovant</Badge>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">AgroConnect</h1>
+                <Badge className="bg-green-600 hover:bg-green-700">
+                  Innovant
+                </Badge>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  AgroConnect
+                </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  La plateforme numérique qui révolutionne l&apos;agriculture au Cameroun en connectant agriculteurs,
-                  experts et entreprises agroalimentaires.
+                  La plateforme numérique qui révolutionne l&apos;agriculture au
+                  Cameroun en connectant agriculteurs, experts et entreprises
+                  agroalimentaires.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -38,7 +58,7 @@ export default function Home() {
               alt="AgroConnect Platform"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               height="310"
-              src="/placeholder.svg?height=310&width=550"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEI0kJVu3PRab2M9KqL3hV6UcroT0mFHAQaQ&s"
               width="550"
             />
           </div>
@@ -54,12 +74,12 @@ export default function Home() {
                 Tableau de bord interactif
               </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Accédez rapidement à toutes les fonctionnalités d&apos;AgroConnect depuis votre tableau de bord
-                personnalisé.
+                Accédez rapidement à toutes les fonctionnalités
+                d&apos;AgroConnect depuis votre tableau de bord personnalisé.
               </p>
             </div>
           </div>
-          <div className="mx-auto mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 items-start">
+          <div className="mx-auto mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-start">
             <DashboardCard
               title="Suivi des cultures"
               description="Suivez l'évolution de vos plantations"
@@ -83,11 +103,7 @@ export default function Home() {
               icon={<BarChart3 className="h-6 w-6 text-purple-600" />}
               href="/agrotrade"
             />
-            <DashboardCard
-              title="AgroPlayce"
-              description="Connectez-vous avec d'autres agriculteurs"
-              icon={<Users className="h-6 w-6 text-red-600" />}
-            />
+
             <DashboardCard
               title="AgroLink"
               description="Échangez avec les acteurs du marché"
@@ -103,19 +119,21 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nos fonctionnalités</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Nos fonctionnalités
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Découvrez comment AgroConnect transforme l&apos;agriculture camerounaise grâce à la technologie.
+                Découvrez comment AgroConnect transforme l&apos;agriculture
+                camerounaise grâce à la technologie.
               </p>
             </div>
           </div>
           <Tabs defaultValue="cultures" className="mt-8">
-            <TabsList className="grid w-full grid-cols-3 md:grid-cols-6">
+            <TabsList className="grid w-full grid-cols-3 md:grid-cols-5">
               <TabsTrigger value="cultures">Cultures</TabsTrigger>
               <TabsTrigger value="sols">Sols</TabsTrigger>
               <TabsTrigger value="vente">Vente</TabsTrigger>
               <TabsTrigger value="agrolink">AgroLink</TabsTrigger>
-              <TabsTrigger value="agroplayce">AgroPlayce</TabsTrigger>
               <TabsTrigger value="chatbot">Chatbot</TabsTrigger>
             </TabsList>
             <TabsContent value="cultures" className="p-4">
@@ -124,20 +142,23 @@ export default function Home() {
                   alt="Suivi des cultures"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://prisecompany.com/images/prise/farm-agri-business.jpeg"
                   width="550"
                 />
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Suivi des cultures</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Notre système de suivi des cultures vous permet de surveiller l&apos;évolution de vos plantations en
-                    temps réel. Recevez des alertes en cas de détection de maladies et accédez à des statistiques
-                    détaillées sur vos cultures.
+                    Notre système de suivi des cultures vous permet de
+                    surveiller l&apos;évolution de vos plantations en temps
+                    réel. Recevez des alertes en cas de détection de maladies et
+                    accédez à des statistiques détaillées sur vos cultures.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Statistiques sur l&apos;évolution des plantations</span>
+                      <span>
+                        Statistiques sur l&apos;évolution des plantations
+                      </span>
                     </li>
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
@@ -157,14 +178,18 @@ export default function Home() {
                   alt="Cartographie et analyse des sols"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSA_NU9TH9dLZIri-2rTx66v6P7GHzDHDgQ&s"
                   width="550"
                 />
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Cartographie et analyse des sols</h3>
+                  <h3 className="text-2xl font-bold">
+                    Cartographie et analyse des sols
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Notre cartographie interactive vous donne accès à des données géospatiales précises sur vos sols.
-                    Analysez les niveaux de fertilité et détectez les maladies du sol pour optimiser vos cultures.
+                    Notre cartographie interactive vous donne accès à des
+                    données géospatiales précises sur vos sols. Analysez les
+                    niveaux de fertilité et détectez les maladies du sol pour
+                    optimiser vos cultures.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
@@ -189,20 +214,25 @@ export default function Home() {
                   alt="Commercialisation et optimisation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="https://images.unsplash.com/photo-1626806787461-102c1a7f1c62?w=550&h=310&auto=format&fit=crop&q=80"
+                  src="https://fastercapital.com/fr/i-fr/Demande-du-marche---analyse-de-la-demande-du-marche---la-cle-d-une-campagne-agricole-rentable--Introduction-a-l-analyse-de-la-demande-du-marche.webp"
                   width="550"
                 />
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Commercialisation et optimisation</h3>
+                  <h3 className="text-2xl font-bold">
+                    Commercialisation et optimisation
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Notre module AgroTrade vous aide à proposer les bons produits au bon moment et au bon endroit.
-                    Accédez à des statistiques de marché et analysez la demande des consommateurs pour maximiser vos
-                    ventes.
+                    Notre module AgroTrade vous aide à proposer les bons
+                    produits au bon moment et au bon endroit. Accédez à des
+                    statistiques de marché et analysez la demande des
+                    consommateurs pour maximiser vos ventes.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Module AgroTrade pour l&apos;optimisation des ventes</span>
+                      <span>
+                        Module AgroTrade pour l&apos;optimisation des ventes
+                      </span>
                     </li>
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
@@ -210,7 +240,9 @@ export default function Home() {
                     </li>
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Réseau d&apos;échange entre agriculteurs et acheteurs</span>
+                      <span>
+                        Réseau d&apos;échange entre agriculteurs et acheteurs
+                      </span>
                     </li>
                   </ul>
                   <Button variant="outline" className="mt-2" asChild>
@@ -222,20 +254,24 @@ export default function Home() {
                 </div>
               </div>
             </TabsContent>
-            <TabsContent value="agroplayce" className="p-4">
+            <TabsContent value="agrolink" className="p-4">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <img
-                  alt="AgroPlayce"
+                  alt="AgroLink"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://www.porcmag.com/var/site/storage/images/_aliases/large/9/0/9/4/3494909-2-fre-FR/rs.jpg"
                   width="550"
                 />
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">AgroPlayce : Réseau social agricole</h3>
+                  <h3 className="text-2xl font-bold">
+                    AgroLink : Réseau social agricole
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    AgroPlayce est un espace de mise en relation entre agriculteurs et sponsors. Boostez la visibilité
-                    de votre exploitation et bénéficiez du mentorat de professionnels expérimentés.
+                    AgroLink est un espace de mise en relation entre
+                    agriculteurs et sponsors. Boostez la visibilité de votre
+                    exploitation et bénéficiez du mentorat de professionnels
+                    expérimentés.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
@@ -254,52 +290,22 @@ export default function Home() {
                 </div>
               </div>
             </TabsContent>
-            <TabsContent value="agrolink" className="p-4">
-              <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-                <img
-                  alt="AgroLink"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
-                  height="310"
-                  src="https://images.unsplash.com/photo-1595925889916-5412362a6c79?w=550&h=310&auto=format&fit=crop&q=80"
-                  width="550"
-                />
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">AgroLink : Connexion avec la chaîne de valeur</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    AgroLink facilite les échanges entre agriculteurs, distributeurs et clients. Accédez à des services
-                    de conseil et de formation en ligne pour développer votre activité.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Plateforme d&apos;échange avec les acteurs du marché</span>
-                    </li>
-                    <li className="flex items-center">
-                      <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Services de conseil personnalisés</span>
-                    </li>
-                    <li className="flex items-center">
-                      <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Formation en ligne pour les agriculteurs</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </TabsContent>
+
             <TabsContent value="chatbot" className="p-4">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <img
                   alt="Chatbot intelligent"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://ds.static.rtbf.be/article/image/1248x1248/3/f/8/24ec8468b67314c2013d215b77034476-1710770212.jpg"
                   width="550"
                 />
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Chatbot intelligent</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Notre chatbot intelligent répond à toutes vos préoccupations agricoles en temps réel. Obtenez des
-                    conseils personnalisés et des solutions à vos problèmes spécifiques.
+                    Notre chatbot intelligent répond à toutes vos préoccupations
+                    agricoles en temps réel. Obtenez des conseils personnalisés
+                    et des solutions à vos problèmes spécifiques.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
@@ -327,7 +333,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Témoignages</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Témoignages
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Découvrez ce que nos utilisateurs disent d&apos;AgroConnect.
               </p>
@@ -358,7 +366,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nos offres</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                Nos offres
+              </h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Choisissez l&apos;offre qui correspond le mieux à vos besoins.
               </p>
@@ -373,14 +383,14 @@ export default function Home() {
                 "Suivi des cultures (fonctionnalités limitées)",
                 "Accès au chatbot (5 questions/jour)",
                 "Cartographie de base",
-                "Accès à la communauté AgroPlayce",
+                "Accès à la communauté AgroLink",
               ]}
               buttonText="Commencer gratuitement"
               buttonVariant="outline"
             />
             <PricingCard
               title="Premium"
-              price="5 000"
+              price="350"
               description="Pour les agriculteurs qui veulent optimiser leur production"
               features={[
                 "Suivi complet des cultures",
@@ -395,7 +405,7 @@ export default function Home() {
             />
             <PricingCard
               title="Entreprise"
-              price="15 000"
+              price="1 500"
               description="Pour les grandes exploitations agricoles"
               features={[
                 "Toutes les fonctionnalités Premium",
@@ -421,15 +431,22 @@ export default function Home() {
                 Prêt à révolutionner votre agriculture ?
               </h2>
               <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Rejoignez AgroConnect dès aujourd&apos;hui et transformez votre exploitation agricole grâce à la
-                technologie.
+                Rejoignez AgroConnect dès aujourd&apos;hui et transformez votre
+                exploitation agricole grâce à la technologie.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-green-600 hover:bg-gray-100"
+              >
                 Commencer gratuitement
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-green-700">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-white border-white hover:bg-green-700"
+              >
                 Demander une démo
               </Button>
             </div>
@@ -439,7 +456,7 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
 
 function DashboardCard({ title, description, icon, href }) {
@@ -449,19 +466,23 @@ function DashboardCard({ title, description, icon, href }) {
           {children}
         </Link>
       )
-    : ({ children }) => <>{children}</>
+    : ({ children }) => <>{children}</>;
 
   return (
     <CardWrapper>
       <Card className="flex flex-col items-center text-center p-4 h-full hover:border-green-500 transition-colors">
-        <div className="mb-4 rounded-full bg-green-100 p-2 dark:bg-green-900">{icon}</div>
+        <div className="mb-4 rounded-full bg-green-100 p-2 dark:bg-green-900">
+          {icon}
+        </div>
         <CardHeader className="p-0 pb-2">
           <CardTitle className="text-xl">{title}</CardTitle>
         </CardHeader>
-        <CardContent className="p-0 text-sm text-gray-500 dark:text-gray-400">{description}</CardContent>
+        <CardContent className="p-0 text-sm text-gray-500 dark:text-gray-400">
+          {description}
+        </CardContent>
       </Card>
     </CardWrapper>
-  )
+  );
 }
 
 function TestimonialCard({ quote, author, role }) {
@@ -480,18 +501,38 @@ function TestimonialCard({ quote, author, role }) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
-function PricingCard({ title, price, description, features, buttonText, buttonVariant = "default", popular = false }) {
+function PricingCard({
+  title,
+  price,
+  description,
+  features,
+  buttonText,
+  buttonVariant = "default",
+  popular = false,
+}) {
   return (
-    <Card className={`flex flex-col ${popular ? "border-green-600 dark:border-green-400 shadow-lg" : ""}`}>
+    <Card
+      className={`flex flex-col ${
+        popular ? "border-green-600 dark:border-green-400 shadow-lg" : ""
+      }`}
+    >
       <CardHeader>
-        {popular && <Badge className="w-fit mb-2 bg-green-600 hover:bg-green-700">Populaire</Badge>}
+        {popular && (
+          <Badge className="w-fit mb-2 bg-green-600 hover:bg-green-700">
+            Populaire
+          </Badge>
+        )}
         <CardTitle>{title}</CardTitle>
         <div className="flex items-baseline gap-1">
           <span className="text-3xl font-bold">{price}</span>
-          {price !== "0" && <span className="text-sm text-gray-500 dark:text-gray-400">FCFA/mois</span>}
+          {price !== "0" && (
+            <span className="text-sm text-gray-500 dark:text-gray-400">
+              $ / An
+            </span>
+          )}
         </div>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
@@ -511,6 +552,5 @@ function PricingCard({ title, price, description, features, buttonText, buttonVa
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
-

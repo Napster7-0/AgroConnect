@@ -1,12 +1,19 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Separator } from "@/components/ui/separator"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Heart,
   MessageCircle,
@@ -34,7 +41,7 @@ import {
   TrendingUp,
   AlertTriangle,
   Map,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function AgroLinkPage() {
   return (
@@ -46,14 +53,21 @@ export default function AgroLinkPage() {
         <section className="w-full py-12 md:py-16 lg:py-20 bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-background">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4">
-              <Badge className="bg-green-600 hover:bg-green-700">Réseau Social Agricole</Badge>
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">AgroLink</h1>
+              <Badge className="bg-green-600 hover:bg-green-700">
+                Réseau Social Agricole
+              </Badge>
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                AgroLink
+              </h1>
               <p className="max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Connectez-vous avec d&apos;autres agriculteurs, experts et investisseurs pour partager, apprendre et
-                développer votre activité agricole.
+                Connectez-vous avec d&apos;autres agriculteurs, experts et
+                investisseurs pour partager, apprendre et développer votre
+                activité agricole.
               </p>
               <div className="flex flex-col sm:flex-row gap-2">
-                <Button className="bg-green-600 hover:bg-green-700">Rejoindre la communauté</Button>
+                <Button className="bg-green-600 hover:bg-green-700">
+                  Rejoindre la communauté
+                </Button>
                 <Button variant="outline">Explorer les groupes</Button>
               </div>
             </div>
@@ -69,43 +83,71 @@ export default function AgroLinkPage() {
                 <Card>
                   <CardContent className="p-4">
                     <nav className="space-y-2">
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="/">
                           <Home className="mr-2 h-4 w-4" />
                           Accueil
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#profile">
                           <User className="mr-2 h-4 w-4" />
                           Mon profil
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#groups">
                           <Users className="mr-2 h-4 w-4" />
                           Groupes
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#marketplace">
                           <ShoppingBag className="mr-2 h-4 w-4" />
                           Marketplace
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#funding">
                           <DollarSign className="mr-2 h-4 w-4" />
                           Financement
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#messages">
                           <MessageSquare className="mr-2 h-4 w-4" />
                           Messages
                         </a>
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start" asChild>
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start"
+                        asChild
+                      >
                         <a href="#tools">
                           <Settings className="mr-2 h-4 w-4" />
                           Outils agricoles
@@ -123,11 +165,10 @@ export default function AgroLinkPage() {
                         <span className="w-2 h-2 rounded-full bg-blue-500 mr-2"></span>
                         Éleveurs innovants
                       </Button>
-                      <Button variant="ghost" className="w-full justify-start">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
-                        Agroforesterie
-                      </Button>
-                      <Button variant="ghost" className="w-full justify-start text-green-600">
+                      <Button
+                        variant="ghost"
+                        className="w-full justify-start text-green-600"
+                      >
                         <Plus className="mr-2 h-4 w-4" />
                         Découvrir plus de groupes
                       </Button>
@@ -138,19 +179,27 @@ export default function AgroLinkPage() {
                 {/* Weather Widget */}
                 <Card className="mt-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Météo agricole</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Météo agricole
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-2xl font-bold">28°C</p>
-                        <p className="text-xs text-muted-foreground">Yaoundé, Cameroun</p>
+                        <p className="text-xs text-muted-foreground">
+                          Yaoundé, Cameroun
+                        </p>
                       </div>
                       <CloudLightning className="h-8 w-8 text-amber-500" />
                     </div>
                     <div className="mt-2 text-xs">
-                      <p className="text-green-600">Idéal pour l&apos;arrosage aujourd&apos;hui</p>
-                      <p className="text-muted-foreground mt-1">Précipitations prévues: 60%</p>
+                      <p className="text-green-600">
+                        Idéal pour l&apos;arrosage aujourd&apos;hui
+                      </p>
+                      <p className="text-muted-foreground mt-1">
+                        Précipitations prévues: 60%
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -158,7 +207,9 @@ export default function AgroLinkPage() {
                 {/* Market Trends */}
                 <Card className="mt-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Tendances du marché</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Tendances du marché
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <div className="flex justify-between items-center">
@@ -191,14 +242,20 @@ export default function AgroLinkPage() {
                 {/* Alerts */}
                 <Card className="mt-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Alertes</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Alertes
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-start space-x-2">
                       <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5" />
                       <div>
-                        <p className="text-xs font-medium">Alerte maladie: Mildiou</p>
-                        <p className="text-xs text-muted-foreground">Détecté dans votre région</p>
+                        <p className="text-xs font-medium">
+                          Alerte maladie: Mildiou
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Détecté dans votre région
+                        </p>
                       </div>
                     </div>
                     <Button variant="ghost" className="w-full text-xs mt-2">
@@ -222,7 +279,10 @@ export default function AgroLinkPage() {
                         <AvatarFallback>UN</AvatarFallback>
                       </Avatar>
                       <div className="flex-1">
-                        <Input placeholder="Partagez vos actualités agricoles..." className="mb-2" />
+                        <Input
+                          placeholder="Partagez vos actualités agricoles..."
+                          className="mb-2"
+                        />
                         <div className="flex flex-wrap gap-2">
                           <Button variant="outline" size="sm">
                             <ImageIcon className="h-4 w-4 mr-2" />
@@ -412,29 +472,49 @@ export default function AgroLinkPage() {
                 {/* Trending Topics */}
                 <Card className="mb-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Sujets tendance</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Sujets tendance
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between">
-                        <span className="text-sm font-medium">#AgricultureDurable</span>
-                        <span className="text-xs text-muted-foreground">2.5k posts</span>
+                        <span className="text-sm font-medium">
+                          #AgricultureDurable
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          2.5k posts
+                        </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-sm font-medium">#InnovationAgricole</span>
-                        <span className="text-xs text-muted-foreground">1.8k posts</span>
+                        <span className="text-sm font-medium">
+                          #InnovationAgricole
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          1.8k posts
+                        </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-sm font-medium">#SécuritéAlimentaire</span>
-                        <span className="text-xs text-muted-foreground">1.2k posts</span>
+                        <span className="text-sm font-medium">
+                          #SécuritéAlimentaire
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          1.2k posts
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm font-medium">#AgriTech</span>
-                        <span className="text-xs text-muted-foreground">950 posts</span>
+                        <span className="text-xs text-muted-foreground">
+                          950 posts
+                        </span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-sm font-medium">#SalonAgricole2023</span>
-                        <span className="text-xs text-muted-foreground">820 posts</span>
+                        <span className="text-sm font-medium">
+                          #SalonAgricole2023
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          820 posts
+                        </span>
                       </div>
                     </div>
                   </CardContent>
@@ -443,7 +523,9 @@ export default function AgroLinkPage() {
                 {/* Suggested Groups */}
                 <Card className="mb-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Groupes suggérés</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Groupes suggérés
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -457,8 +539,12 @@ export default function AgroLinkPage() {
                             <AvatarFallback>AC</AvatarFallback>
                           </Avatar>
                           <div>
-                            <p className="text-sm font-medium">Agriculteurs Bio</p>
-                            <p className="text-xs text-muted-foreground">3.2k membres</p>
+                            <p className="text-sm font-medium">
+                              Agriculteurs Bio
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              3.2k membres
+                            </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -475,8 +561,12 @@ export default function AgroLinkPage() {
                             <AvatarFallback>JA</AvatarFallback>
                           </Avatar>
                           <div>
-                            <p className="text-sm font-medium">Jeunes Agriculteurs</p>
-                            <p className="text-xs text-muted-foreground">2.8k membres</p>
+                            <p className="text-sm font-medium">
+                              Jeunes Agriculteurs
+                            </p>
+                            <p className="text-xs text-muted-foreground">
+                              2.8k membres
+                            </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -494,7 +584,9 @@ export default function AgroLinkPage() {
                           </Avatar>
                           <div>
                             <p className="text-sm font-medium">Tech Agricole</p>
-                            <p className="text-xs text-muted-foreground">1.5k membres</p>
+                            <p className="text-xs text-muted-foreground">
+                              1.5k membres
+                            </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -511,28 +603,12 @@ export default function AgroLinkPage() {
                 {/* Suggested Connections */}
                 <Card className="mb-4">
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Suggestions de connexion</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Suggestions de connexion
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-2">
-                          <Avatar className="h-8 w-8">
-                            <AvatarImage
-                              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&auto=format&fit=crop&q=80"
-                              alt="User"
-                            />
-                            <AvatarFallback>RN</AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <p className="text-sm font-medium">Robert Ndongo</p>
-                            <p className="text-xs text-muted-foreground">Expert en agroforesterie</p>
-                          </div>
-                        </div>
-                        <Button variant="outline" size="sm">
-                          Suivre
-                        </Button>
-                      </div>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
                           <Avatar className="h-8 w-8">
@@ -544,7 +620,9 @@ export default function AgroLinkPage() {
                           </Avatar>
                           <div>
                             <p className="text-sm font-medium">Claire Essono</p>
-                            <p className="text-xs text-muted-foreground">Éleveuse de volailles</p>
+                            <p className="text-xs text-muted-foreground">
+                              Éleveuse de volailles
+                            </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -562,7 +640,9 @@ export default function AgroLinkPage() {
                           </Avatar>
                           <div>
                             <p className="text-sm font-medium">Pierre Meka</p>
-                            <p className="text-xs text-muted-foreground">Investisseur agricole</p>
+                            <p className="text-xs text-muted-foreground">
+                              Investisseur agricole
+                            </p>
                           </div>
                         </div>
                         <Button variant="outline" size="sm">
@@ -579,7 +659,9 @@ export default function AgroLinkPage() {
                 {/* Upcoming Events */}
                 <Card>
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-sm font-medium">Événements à venir</CardTitle>
+                    <CardTitle className="text-sm font-medium">
+                      Événements à venir
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
@@ -589,8 +671,12 @@ export default function AgroLinkPage() {
                           <p className="text-xs">Juin</p>
                         </div>
                         <div>
-                          <p className="text-sm font-medium">Salon Agricole de Kribi</p>
-                          <p className="text-xs text-muted-foreground">Centre des congrès, Kribi</p>
+                          <p className="text-sm font-medium">
+                            Salon Agricole de Kribi
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            Centre des congrès, Kribi
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-2">
@@ -599,8 +685,12 @@ export default function AgroLinkPage() {
                           <p className="text-xs">Juin</p>
                         </div>
                         <div>
-                          <p className="text-sm font-medium">Webinaire: Agriculture durable</p>
-                          <p className="text-xs text-muted-foreground">En ligne, 14h00</p>
+                          <p className="text-sm font-medium">
+                            Webinaire: Agriculture durable
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            En ligne, 14h00
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start space-x-2">
@@ -609,8 +699,12 @@ export default function AgroLinkPage() {
                           <p className="text-xs">Juin</p>
                         </div>
                         <div>
-                          <p className="text-sm font-medium">Formation: Techniques d&apos;irrigation</p>
-                          <p className="text-xs text-muted-foreground">Centre agricole, Yaoundé</p>
+                          <p className="text-sm font-medium">
+                            Formation: Techniques d&apos;irrigation
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            Centre agricole, Yaoundé
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -625,12 +719,18 @@ export default function AgroLinkPage() {
         </section>
 
         {/* Groups Section */}
-        <section className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950" id="groups">
+        <section
+          className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950"
+          id="groups"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Groupes et Communautés</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">
+                Groupes et Communautés
+              </h2>
               <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Rejoignez des groupes thématiques pour échanger avec d&apos;autres agriculteurs partageant vos intérêts.
+                Rejoignez des groupes thématiques pour échanger avec
+                d&apos;autres agriculteurs partageant vos intérêts.
               </p>
             </div>
 
@@ -665,13 +765,6 @@ export default function AgroLinkPage() {
                     color="blue"
                   />
                   <GroupCard
-                    name="Agroforesterie"
-                    members={750}
-                    description="Combiner agriculture et foresterie pour des systèmes durables et productifs."
-                    image="https://images.unsplash.com/photo-1501168025369-99d0a1c54900?w=200&h=100&auto=format&fit=crop&q=80"
-                    color="amber"
-                  />
-                  <GroupCard
                     name="Jeunes Agriculteurs"
                     members={1820}
                     description="Réseau de jeunes entrepreneurs agricoles partageant leurs expériences et défis."
@@ -682,7 +775,7 @@ export default function AgroLinkPage() {
                     name="Agriculture Bio"
                     members={1540}
                     description="Tout sur l'agriculture biologique, la certification et les techniques naturelles."
-                    image="https://images.unsplash.com/photo-1615915588152-3ae667439326?w=200&h=100&auto=format&fit=crop&q=80"
+                    image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwUAdSFH3qhSOpDw-Xd__8kxyZAaTKFgy_sw&s"
                     color="emerald"
                   />
                   <GroupCard
@@ -783,10 +876,12 @@ export default function AgroLinkPage() {
         <section className="w-full py-8 md:py-12 lg:py-16" id="marketplace">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Marketplace Agricole</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">
+                Marketplace Agricole
+              </h2>
               <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Achetez et vendez des produits agricoles, du matériel et des services directement auprès d&apos;autres
-                membres.
+                Achetez et vendez des produits agricoles, du matériel et des
+                services directement auprès d&apos;autres membres.
               </p>
               <Button className="bg-green-600 hover:bg-green-700">
                 <Plus className="h-4 w-4 mr-2" />
@@ -797,7 +892,9 @@ export default function AgroLinkPage() {
             <Tabs defaultValue="products" className="w-full max-w-6xl mx-auto">
               <TabsList className="grid w-full grid-cols-4">
                 <TabsTrigger value="products">Produits agricoles</TabsTrigger>
-                <TabsTrigger value="equipment">Matériel & Équipements</TabsTrigger>
+                <TabsTrigger value="equipment">
+                  Matériel & Équipements
+                </TabsTrigger>
                 <TabsTrigger value="seeds">Semences & Intrants</TabsTrigger>
                 <TabsTrigger value="services">Services</TabsTrigger>
               </TabsList>
@@ -989,15 +1086,23 @@ export default function AgroLinkPage() {
         </section>
 
         {/* Funding Section */}
-        <section className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950" id="funding">
+        <section
+          className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950"
+          id="funding"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Financement Participatif & Investissements</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">
+                Financement Participatif & Investissements
+              </h2>
               <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Présentez vos projets agricoles pour obtenir du soutien ou investissez dans des projets prometteurs.
+                Présentez vos projets agricoles pour obtenir du soutien ou
+                investissez dans des projets prometteurs.
               </p>
               <div className="flex flex-col sm:flex-row gap-2">
-                <Button className="bg-green-600 hover:bg-green-700">Proposer un projet</Button>
+                <Button className="bg-green-600 hover:bg-green-700">
+                  Proposer un projet
+                </Button>
                 <Button variant="outline">Explorer les projets</Button>
               </div>
             </div>
@@ -1036,24 +1141,31 @@ export default function AgroLinkPage() {
             </div>
 
             <div className="mt-12 max-w-6xl mx-auto">
-              <h3 className="text-xl font-bold mb-6">Opportunités d&apos;investissement</h3>
+              <h3 className="text-xl font-bold mb-6">
+                Opportunités d&apos;investissement
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card>
                   <CardHeader>
                     <CardTitle>Coopérative agricole du Centre</CardTitle>
                     <CardDescription>
-                      Investissement dans une coopérative de producteurs de fruits et légumes
+                      Investissement dans une coopérative de producteurs de
+                      fruits et légumes
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-sm">Rendement estimé:</span>
-                        <span className="text-sm font-medium">12-15% par an</span>
+                        <span className="text-sm font-medium">
+                          12-15% par an
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Investissement minimum:</span>
-                        <span className="text-sm font-medium">500 000 FCFA</span>
+                        <span className="text-sm font-medium">
+                          500 000 FCFA
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Durée:</span>
@@ -1072,17 +1184,24 @@ export default function AgroLinkPage() {
                 <Card>
                   <CardHeader>
                     <CardTitle>Expansion ferme laitière</CardTitle>
-                    <CardDescription>Financement de l&apos;expansion d&apos;une ferme laitière établie</CardDescription>
+                    <CardDescription>
+                      Financement de l&apos;expansion d&apos;une ferme laitière
+                      établie
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-sm">Rendement estimé:</span>
-                        <span className="text-sm font-medium">10-12% par an</span>
+                        <span className="text-sm font-medium">
+                          10-12% par an
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Investissement minimum:</span>
-                        <span className="text-sm font-medium">1 000 000 FCFA</span>
+                        <span className="text-sm font-medium">
+                          1 000 000 FCFA
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm">Durée:</span>
@@ -1107,10 +1226,12 @@ export default function AgroLinkPage() {
         <section className="w-full py-8 md:py-12 lg:py-16" id="chatbot">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Assistant IA Agricole</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">
+                Assistant IA Agricole
+              </h2>
               <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Notre assistant IA vous aide à résoudre vos problèmes agricoles, identifier les maladies des plantes et
-                optimiser vos cultures.
+                Notre assistant IA vous aide à résoudre vos problèmes agricoles,
+                identifier les maladies des plantes et optimiser vos cultures.
               </p>
             </div>
 
@@ -1140,15 +1261,16 @@ export default function AgroLinkPage() {
                       </Avatar>
                       <div className="bg-muted p-3 rounded-lg">
                         <p className="text-sm">
-                          Bonjour ! Je suis AgroBot, votre assistant agricole. Comment puis-je vous aider
-                          aujourd&apos;hui ?
+                          Bonjour ! Je suis AgroBot, votre assistant agricole.
+                          Comment puis-je vous aider aujourd&apos;hui ?
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start justify-end">
                       <div className="bg-green-100 dark:bg-green-900 p-3 rounded-lg">
                         <p className="text-sm">
-                          Mes plants de tomates ont des taches jaunes sur les feuilles. Que dois-je faire ?
+                          Mes plants de tomates ont des taches jaunes sur les
+                          feuilles. Que dois-je faire ?
                         </p>
                       </div>
                       <Avatar className="h-8 w-8 ml-2">
@@ -1169,11 +1291,15 @@ export default function AgroLinkPage() {
                       </Avatar>
                       <div className="bg-muted p-3 rounded-lg">
                         <p className="text-sm">
-                          D&apos;après votre description, il pourrait s&apos;agir d&apos;une carence en magnésium ou
-                          d&apos;un début de mildiou. Pouvez-vous m&apos;envoyer une photo des feuilles affectées pour
-                          un diagnostic plus précis ?
+                          D&apos;après votre description, il pourrait
+                          s&apos;agir d&apos;une carence en magnésium ou
+                          d&apos;un début de mildiou. Pouvez-vous m&apos;envoyer
+                          une photo des feuilles affectées pour un diagnostic
+                          plus précis ?
                         </p>
-                        <p className="text-sm mt-2">En attendant, je vous recommande de :</p>
+                        <p className="text-sm mt-2">
+                          En attendant, je vous recommande de :
+                        </p>
                         <ul className="list-disc list-inside text-sm mt-1">
                           <li>Isoler les plants affectés</li>
                           <li>Éviter d&apos;arroser les feuilles</li>
@@ -1210,18 +1336,23 @@ export default function AgroLinkPage() {
                       </Avatar>
                       <div className="bg-muted p-3 rounded-lg">
                         <p className="text-sm">
-                          Merci pour la photo. Il s&apos;agit bien d&apos;un début de mildiou, une maladie fongique
-                          courante chez les tomates. Voici ce que je vous recommande :
+                          Merci pour la photo. Il s&apos;agit bien d&apos;un
+                          début de mildiou, une maladie fongique courante chez
+                          les tomates. Voici ce que je vous recommande :
                         </p>
                         <ul className="list-disc list-inside text-sm mt-1">
                           <li>Retirez immédiatement les feuilles infectées</li>
                           <li>Appliquez un fongicide à base de cuivre</li>
-                          <li>Améliorez la circulation d&apos;air entre les plants</li>
-                          <li>Arrosez à la base des plants, jamais les feuilles</li>
+                          <li>
+                            Améliorez la circulation d&apos;air entre les plants
+                          </li>
+                          <li>
+                            Arrosez à la base des plants, jamais les feuilles
+                          </li>
                         </ul>
                         <p className="text-sm mt-2">
-                          Souhaitez-vous des informations plus détaillées sur les traitements biologiques contre le
-                          mildiou ?
+                          Souhaitez-vous des informations plus détaillées sur
+                          les traitements biologiques contre le mildiou ?
                         </p>
                       </div>
                     </div>
@@ -1233,8 +1364,14 @@ export default function AgroLinkPage() {
                       <ImageIcon className="h-4 w-4" />
                       <span className="sr-only">Ajouter une image</span>
                     </Button>
-                    <Input placeholder="Posez votre question agricole..." className="flex-1" />
-                    <Button size="icon" className="bg-green-600 hover:bg-green-700">
+                    <Input
+                      placeholder="Posez votre question agricole..."
+                      className="flex-1"
+                    />
+                    <Button
+                      size="icon"
+                      className="bg-green-600 hover:bg-green-700"
+                    >
                       <Send className="h-4 w-4" />
                       <span className="sr-only">Envoyer</span>
                     </Button>
@@ -1243,13 +1380,17 @@ export default function AgroLinkPage() {
               </Card>
 
               <div className="mt-6 text-center">
-                <p className="text-sm text-muted-foreground">Notre IA peut vous aider avec :</p>
+                <p className="text-sm text-muted-foreground">
+                  Notre IA peut vous aider avec :
+                </p>
                 <div className="flex flex-wrap justify-center gap-2 mt-2">
                   <Badge variant="outline">Diagnostic de maladies</Badge>
                   <Badge variant="outline">Conseils de culture</Badge>
                   <Badge variant="outline">Analyse de marché</Badge>
                   <Badge variant="outline">Planification des récoltes</Badge>
-                  <Badge variant="outline">Recommandations d&apos;engrais</Badge>
+                  <Badge variant="outline">
+                    Recommandations d&apos;engrais
+                  </Badge>
                 </div>
               </div>
             </div>
@@ -1257,12 +1398,18 @@ export default function AgroLinkPage() {
         </section>
 
         {/* Tools Section */}
-        <section className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950" id="tools">
+        <section
+          className="w-full py-8 md:py-12 lg:py-16 bg-green-50 dark:bg-green-950"
+          id="tools"
+        >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center space-y-4 mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter">Outils & Services Agricoles</h2>
+              <h2 className="text-3xl font-bold tracking-tighter">
+                Outils & Services Agricoles
+              </h2>
               <p className="max-w-[700px] text-gray-500 dark:text-gray-400">
-                Accédez à des outils avancés pour optimiser votre exploitation agricole.
+                Accédez à des outils avancés pour optimiser votre exploitation
+                agricole.
               </p>
             </div>
 
@@ -1276,7 +1423,8 @@ export default function AgroLinkPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Prévisions météorologiques précises pour votre exploitation avec alertes personnalisées.
+                    Prévisions météorologiques précises pour votre exploitation
+                    avec alertes personnalisées.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -1294,7 +1442,8 @@ export default function AgroLinkPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Suivez les tendances des prix agricoles et optimisez vos ventes.
+                    Suivez les tendances des prix agricoles et optimisez vos
+                    ventes.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -1312,7 +1461,8 @@ export default function AgroLinkPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Recevez des alertes en temps réel sur les maladies et ravageurs dans votre région.
+                    Recevez des alertes en temps réel sur les maladies et
+                    ravageurs dans votre région.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -1325,12 +1475,15 @@ export default function AgroLinkPage() {
                 <CardHeader>
                   <div className="flex items-center space-x-2">
                     <Map className="h-5 w-5 text-blue-500" />
-                    <CardTitle className="text-lg">Carte des ressources</CardTitle>
+                    <CardTitle className="text-lg">
+                      Carte des ressources
+                    </CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Localisez les marchés, coopératives et centres de formation agricoles près de chez vous.
+                    Localisez les marchés, coopératives et centres de formation
+                    agricoles près de chez vous.
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -1352,15 +1505,22 @@ export default function AgroLinkPage() {
                   Rejoignez la communauté AgroLink
                 </h2>
                 <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Connectez-vous avec plus de 10 000 agriculteurs, experts et investisseurs pour développer votre
-                  activité agricole.
+                  Connectez-vous avec plus de 10 000 agriculteurs, experts et
+                  investisseurs pour développer votre activité agricole.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-green-600 hover:bg-gray-100"
+                >
                   S&apos;inscrire gratuitement
                 </Button>
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-green-700">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-white border-white hover:bg-green-700"
+                >
                   En savoir plus
                 </Button>
               </div>
@@ -1371,7 +1531,7 @@ export default function AgroLinkPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
 
 function PostCard({ user, content, engagement, type }) {
@@ -1411,13 +1571,21 @@ function PostCard({ user, content, engagement, type }) {
 
               {type === "regular" && content.image && (
                 <div className="mt-3 rounded-md overflow-hidden">
-                  <img src={content.image || "/placeholder.svg"} alt="Post" className="w-full" />
+                  <img
+                    src={content.image || "/placeholder.svg"}
+                    alt="Post"
+                    className="w-full"
+                  />
                 </div>
               )}
 
               {type === "video" && content.video && (
                 <div className="mt-3 rounded-md overflow-hidden relative">
-                  <img src={content.video || "/placeholder.svg"} alt="Video thumbnail" className="w-full" />
+                  <img
+                    src={content.video || "/placeholder.svg"}
+                    alt="Video thumbnail"
+                    className="w-full"
+                  />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-black bg-opacity-50 rounded-full p-3">
                       <Video className="h-8 w-8 text-white" />
@@ -1432,7 +1600,9 @@ function PostCard({ user, content, engagement, type }) {
                     <HelpCircle className="h-4 w-4 mr-2" />
                     <span className="font-medium">Question</span>
                   </div>
-                  <p className="text-sm mt-1 text-amber-800 dark:text-amber-200">{content.text}</p>
+                  <p className="text-sm mt-1 text-amber-800 dark:text-amber-200">
+                    {content.text}
+                  </p>
                 </div>
               )}
 
@@ -1458,8 +1628,13 @@ function PostCard({ user, content, engagement, type }) {
               {type === "poll" && content.pollOptions && (
                 <div className="mt-3 space-y-2">
                   {content.pollOptions.map((option, index) => {
-                    const totalVotes = content.pollOptions.reduce((sum, opt) => sum + opt.votes, 0)
-                    const percentage = Math.round((option.votes / totalVotes) * 100)
+                    const totalVotes = content.pollOptions.reduce(
+                      (sum, opt) => sum + opt.votes,
+                      0
+                    );
+                    const percentage = Math.round(
+                      (option.votes / totalVotes) * 100
+                    );
 
                     return (
                       <div key={index} className="space-y-1">
@@ -1468,11 +1643,16 @@ function PostCard({ user, content, engagement, type }) {
                           <span>{percentage}%</span>
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div className="bg-green-600 h-2 rounded-full" style={{ width: `${percentage}%` }}></div>
+                          <div
+                            className="bg-green-600 h-2 rounded-full"
+                            style={{ width: `${percentage}%` }}
+                          ></div>
                         </div>
-                        <p className="text-xs text-muted-foreground">{option.votes} votes</p>
+                        <p className="text-xs text-muted-foreground">
+                          {option.votes} votes
+                        </p>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               )}
@@ -1480,20 +1660,36 @@ function PostCard({ user, content, engagement, type }) {
 
             <div className="flex items-center justify-between mt-4">
               <div className="flex space-x-4">
-                <Button variant="ghost" size="sm" className="flex items-center space-x-1 text-muted-foreground">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-1 text-muted-foreground"
+                >
                   <Heart className="h-4 w-4" />
                   <span>{engagement.likes}</span>
                 </Button>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-1 text-muted-foreground">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-1 text-muted-foreground"
+                >
                   <MessageCircle className="h-4 w-4" />
                   <span>{engagement.comments}</span>
                 </Button>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-1 text-muted-foreground">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center space-x-1 text-muted-foreground"
+                >
                   <Share2 className="h-4 w-4" />
                   <span>{engagement.shares}</span>
                 </Button>
               </div>
-              <Button variant="ghost" size="sm" className="text-muted-foreground">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-muted-foreground"
+              >
                 <Bookmark className="h-4 w-4" />
               </Button>
             </div>
@@ -1501,7 +1697,7 @@ function PostCard({ user, content, engagement, type }) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 function GroupCard({ name, members, description, image, color }) {
@@ -1509,22 +1705,33 @@ function GroupCard({ name, members, description, image, color }) {
     green: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
     blue: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
     amber: "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
-    purple: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-    emerald: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200",
-    indigo: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
-    yellow: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+    purple:
+      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+    emerald:
+      "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200",
+    indigo:
+      "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+    yellow:
+      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
     red: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-    orange: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+    orange:
+      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
     cyan: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
     pink: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
-  }
+  };
 
   return (
     <Card className="overflow-hidden">
       <div className="relative h-32">
-        <img src={image || "/placeholder.svg"} alt={name} className="w-full h-full object-cover" />
+        <img
+          src={image || "/placeholder.svg"}
+          alt={name}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute top-2 right-2">
-          <Badge className={colorClasses[color] || colorClasses.green}>{members} membres</Badge>
+          <Badge className={colorClasses[color] || colorClasses.green}>
+            {members} membres
+          </Badge>
         </div>
       </div>
       <CardHeader className="pb-2">
@@ -1537,14 +1744,18 @@ function GroupCard({ name, members, description, image, color }) {
         <Button className="w-full">Rejoindre le groupe</Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
 
 function MarketplaceCard({ title, price, unit, location, seller, image }) {
   return (
     <Card className="overflow-hidden">
       <div className="relative h-40">
-        <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+        <img
+          src={image || "/placeholder.svg"}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute top-2 right-2">
           <Badge className="bg-green-600 hover:bg-green-700">
             {price} {unit}
@@ -1572,21 +1783,40 @@ function MarketplaceCard({ title, price, unit, location, seller, image }) {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
 
-function FundingProjectCard({ title, goal, raised, creator, location, daysLeft, backers, image }) {
+function FundingProjectCard({
+  title,
+  goal,
+  raised,
+  creator,
+  location,
+  daysLeft,
+  backers,
+  image,
+}) {
   const progress = Math.min(
-    Math.round((Number.parseInt(raised.replace(/\s/g, "")) / Number.parseInt(goal.replace(/\s/g, ""))) * 100),
-    100,
-  )
+    Math.round(
+      (Number.parseInt(raised.replace(/\s/g, "")) /
+        Number.parseInt(goal.replace(/\s/g, ""))) *
+        100
+    ),
+    100
+  );
 
   return (
     <Card className="overflow-hidden">
       <div className="relative h-48">
-        <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+        <img
+          src={image || "/placeholder.svg"}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute top-2 right-2">
-          <Badge className="bg-green-600 hover:bg-green-700">{daysLeft} jours restants</Badge>
+          <Badge className="bg-green-600 hover:bg-green-700">
+            {daysLeft} jours restants
+          </Badge>
         </div>
       </div>
       <CardHeader className="pb-2">
@@ -1600,10 +1830,15 @@ function FundingProjectCard({ title, goal, raised, creator, location, daysLeft, 
         <div className="space-y-2">
           <div className="flex justify-between">
             <span className="text-sm font-medium">{raised} FCFA</span>
-            <span className="text-sm text-muted-foreground">sur {goal} FCFA</span>
+            <span className="text-sm text-muted-foreground">
+              sur {goal} FCFA
+            </span>
           </div>
           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-            <div className="bg-green-600 h-2 rounded-full" style={{ width: `${progress}%` }}></div>
+            <div
+              className="bg-green-600 h-2 rounded-full"
+              style={{ width: `${progress}%` }}
+            ></div>
           </div>
           <div className="flex justify-between text-sm text-muted-foreground">
             <span>{progress}% financé</span>
@@ -1612,9 +1847,10 @@ function FundingProjectCard({ title, goal, raised, creator, location, daysLeft, 
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full bg-green-600 hover:bg-green-700">Soutenir ce projet</Button>
+        <Button className="w-full bg-green-600 hover:bg-green-700">
+          Soutenir ce projet
+        </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
-
