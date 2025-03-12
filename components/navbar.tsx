@@ -15,8 +15,17 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
+import { useAuth } from "@/context/auth-context"
+import { UserNav } from "./user-nav"
 
 export function Navbar() {
+  const { user, isLoading } = useAuth()
+
+  const handleLogout = () => {
+    const { logout } = useAuth()
+    logout()
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -68,12 +77,22 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <div className="hidden md:flex md:items-center md:gap-2">
             <ModeToggle />
-            <Button variant="outline" size="sm" asChild>
-              <Link href="#">Se connecter</Link>
-            </Button>
-            <Button size="sm" className="bg-green-600 hover:bg-green-700" asChild>
-              <Link href="#">S&apos;inscrire</Link>
-            </Button>
+            {!isLoading && (
+              <>
+                {user ? (
+                  <UserNav />
+                ) : (
+                  <>
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href="/login">Se connecter</Link>
+                    </Button>
+                    <Button size="sm" className="bg-green-600 hover:bg-green-700" asChild>
+                      <Link href="/register">S&apos;inscrire</Link>
+                    </Button>
+                  </>
+                )}
+              </>
+            )}
           </div>
           <div className="md:hidden">
             <Sheet>
@@ -110,12 +129,32 @@ export function Navbar() {
                     AgroTrade
                   </Link>
                   <div className="flex flex-col gap-2 mt-4">
-                    <Button variant="outline" asChild>
-                      <Link href="#">Se connecter</Link>
-                    </Button>
-                    <Button className="bg-green-600 hover:bg-green-700" asChild>
-                      <Link href="#">S&apos;inscrire</Link>
-                    </Button>
+                    {!isLoading && (
+                      <>
+                        {user ? (
+                          <div className="flex items-center gap-2 p-2 border rounded-md">
+                            <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-800">
+                              {user.name.charAt(0)}
+                            </div>
+                            <div>
+                              <p className="font-medium">{user.name}</p>
+                              <Button variant="ghost" size="sm" onClick={handleLogout}>
+                                Se déconnecter
+                              </Button>
+                            </div>
+                          </div>
+                        ) : (
+                          <>
+                            <Button variant="outline" asChild>
+                              <Link href="/login">Se connecter</Link>
+                            </Button>
+                            <Button className="bg-green-600 hover:bg-green-700" asChild>
+                              <Link href="/register">S&apos;inscrire</Link>
+                            </Button>
+                          </>
+                        )}
+                      </>
+                    )}
                     <div className="mt-2">
                       <ModeToggle />
                     </div>
