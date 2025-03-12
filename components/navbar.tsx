@@ -31,16 +31,16 @@ export function Navbar() {
                   <NavigationMenuTrigger>Fonctionnalités</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-2">
-                      <ListItem href="#" title="Suivi des cultures">
+                      <ListItem href="/suivi-cultures" title="Suivi des cultures">
                         Suivez l&apos;évolution de vos plantations et détectez les maladies
                       </ListItem>
-                      <ListItem href="#" title="Cartographie">
+                      <ListItem href="/cartographie" title="Cartographie">
                         Analysez la qualité de vos sols avec des données géospatiales
                       </ListItem>
-                      <ListItem href="#" title="AgroFlow">
+                      <ListItem href="/agrotrade" title="AgroTrade">
                         Optimisez la commercialisation de vos produits agricoles
                       </ListItem>
-                      <ListItem href="#" title="AgroPlayce">
+                      <ListItem href="/agrolink" title="AgroLink">
                         Connectez-vous avec d&apos;autres agriculteurs et des sponsors
                       </ListItem>
                     </ul>
@@ -96,6 +96,18 @@ export function Navbar() {
                   </Link>
                   <Link href="#" className="text-lg font-medium">
                     Contact
+                  </Link>
+                  <Link href="/agrolink" className="text-lg font-medium">
+                    AgroLink
+                  </Link>
+                  <Link href="/suivi-cultures" className="text-lg font-medium">
+                    Suivi des cultures
+                  </Link>
+                  <Link href="/cartographie" className="text-lg font-medium">
+                    Cartographie
+                  </Link>
+                  <Link href="/agrotrade" className="text-lg font-medium">
+                    AgroTrade
                   </Link>
                   <div className="flex flex-col gap-2 mt-4">
                     <Button variant="outline" asChild>

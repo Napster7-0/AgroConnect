@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
 import { ChevronRight, Leaf, Map, MessageSquare, BarChart3, Users, Link2 } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -63,6 +64,7 @@ export default function Home() {
               title="Suivi des cultures"
               description="Suivez l'évolution de vos plantations"
               icon={<Leaf className="h-6 w-6 text-green-600" />}
+              href="/suivi-cultures"
             />
             <DashboardCard
               title="Chatbot"
@@ -73,11 +75,13 @@ export default function Home() {
               title="Cartographie"
               description="Analysez la qualité de vos sols"
               icon={<Map className="h-6 w-6 text-amber-600" />}
+              href="/cartographie"
             />
             <DashboardCard
-              title="AgroFlow"
+              title="AgroTrade"
               description="Optimisez vos ventes"
               icon={<BarChart3 className="h-6 w-6 text-purple-600" />}
+              href="/agrotrade"
             />
             <DashboardCard
               title="AgroPlayce"
@@ -88,6 +92,7 @@ export default function Home() {
               title="AgroLink"
               description="Échangez avec les acteurs du marché"
               icon={<Link2 className="h-6 w-6 text-indigo-600" />}
+              href="/agrolink"
             />
           </div>
         </div>
@@ -109,8 +114,8 @@ export default function Home() {
               <TabsTrigger value="cultures">Cultures</TabsTrigger>
               <TabsTrigger value="sols">Sols</TabsTrigger>
               <TabsTrigger value="vente">Vente</TabsTrigger>
-              <TabsTrigger value="agroplayce">AgroPlayce</TabsTrigger>
               <TabsTrigger value="agrolink">AgroLink</TabsTrigger>
+              <TabsTrigger value="agroplayce">AgroPlayce</TabsTrigger>
               <TabsTrigger value="chatbot">Chatbot</TabsTrigger>
             </TabsList>
             <TabsContent value="cultures" className="p-4">
@@ -184,20 +189,20 @@ export default function Home() {
                   alt="Commercialisation et optimisation"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://images.unsplash.com/photo-1626806787461-102c1a7f1c62?w=550&h=310&auto=format&fit=crop&q=80"
                   width="550"
                 />
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Commercialisation et optimisation</h3>
                   <p className="text-gray-500 dark:text-gray-400">
-                    Notre module AgroFlow vous aide à proposer les bons produits au bon moment et au bon endroit.
+                    Notre module AgroTrade vous aide à proposer les bons produits au bon moment et au bon endroit.
                     Accédez à des statistiques de marché et analysez la demande des consommateurs pour maximiser vos
                     ventes.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
-                      <span>Module AgroFlow pour l&apos;optimisation des ventes</span>
+                      <span>Module AgroTrade pour l&apos;optimisation des ventes</span>
                     </li>
                     <li className="flex items-center">
                       <ChevronRight className="mr-2 h-4 w-4 text-green-600" />
@@ -208,6 +213,12 @@ export default function Home() {
                       <span>Réseau d&apos;échange entre agriculteurs et acheteurs</span>
                     </li>
                   </ul>
+                  <Button variant="outline" className="mt-2" asChild>
+                    <Link href="/agrotrade">
+                      Découvrir AgroTrade
+                      <ChevronRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </TabsContent>
@@ -249,7 +260,7 @@ export default function Home() {
                   alt="AgroLink"
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
                   height="310"
-                  src="/placeholder.svg?height=310&width=550"
+                  src="https://images.unsplash.com/photo-1595925889916-5412362a6c79?w=550&h=310&auto=format&fit=crop&q=80"
                   width="550"
                 />
                 <div className="space-y-4">
@@ -431,15 +442,25 @@ export default function Home() {
   )
 }
 
-function DashboardCard({ title, description, icon }) {
+function DashboardCard({ title, description, icon, href }) {
+  const CardWrapper = href
+    ? ({ children }) => (
+        <Link href={href} className="block h-full">
+          {children}
+        </Link>
+      )
+    : ({ children }) => <>{children}</>
+
   return (
-    <Card className="flex flex-col items-center text-center p-4 h-full">
-      <div className="mb-4 rounded-full bg-green-100 p-2 dark:bg-green-900">{icon}</div>
-      <CardHeader className="p-0 pb-2">
-        <CardTitle className="text-xl">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="p-0 text-sm text-gray-500 dark:text-gray-400">{description}</CardContent>
-    </Card>
+    <CardWrapper>
+      <Card className="flex flex-col items-center text-center p-4 h-full hover:border-green-500 transition-colors">
+        <div className="mb-4 rounded-full bg-green-100 p-2 dark:bg-green-900">{icon}</div>
+        <CardHeader className="p-0 pb-2">
+          <CardTitle className="text-xl">{title}</CardTitle>
+        </CardHeader>
+        <CardContent className="p-0 text-sm text-gray-500 dark:text-gray-400">{description}</CardContent>
+      </Card>
+    </CardWrapper>
   )
 }
 
